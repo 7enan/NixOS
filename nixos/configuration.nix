@@ -26,7 +26,8 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  
+  services.udisks2.enable = true;
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -55,7 +56,7 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
-
+  
   # Flatpak
   services.flatpak.enable = true;
 
@@ -63,7 +64,8 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  programs.hyprland.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -102,7 +104,9 @@
     description = "Renan";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
+      kiwix
+      gnome-network-displays
+
     ];
   };
 
@@ -114,27 +118,52 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  
+ 
+  security.polkit.enable = true;
+
   environment.systemPackages = with pkgs; [
     # System
     gnome-keyring
-
-     # Hyprland
-    hyprlock
-    hyprpaper
-    hypridle
-    hyprsunset
+    playerctl
+    brightnessctl
+    exfatprogs
 
     #Apps
     wget
     git
     neovim
-    kitty
-    ranger
-    rofi
-    bluetuith
-    wiremix
+    p7zip
+    unrar
+    sqlite
+    fastfetch
+    udisks
+    sqlitebrowser
+    kdePackages.kcalc # Calculator
+    kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
+    kdePackages.kclock # Clock app
+    kdePackages.kcolorchooser # A small utility to select a color
+    kdePackages.kolourpaint # Easy-to-use paint program
+    kdePackages.ksystemlog # KDE SystemLog Application
+    kdePackages.sddm-kcm # Configuration module for SDDM
+    kdiff3
+    kdePackages.partitionmanager
+    vlc
+    hplip
+    qbittorrent
+    ollama-vulkan
+    alpaca
+    python3
+    python3Packages.pip
 
+  ];
+
+  #pkgs.alpaca.override = {
+  #  ollama = pkgs.ollama-vulkan;
+  #};
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+  plasma-browser-integration
+  elisa
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -167,4 +196,50 @@
 
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   xdg.portal.config.common.default = "gtk";
+  
+  ##/######\##
+  #/#NixOS##\#
+  #\#Laptop#/#
+  ##\######/##
+  
+  # Thermald
+  services.thermald.enable = true;
+
+  # TLP
+#  services.tlp = {
+#      enable = true;
+#      settings = {
+#        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+#        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+#
+#        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+#        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+#
+#        CPU_MIN_PERF_ON_AC = 0;
+#        CPU_MAX_PERF_ON_AC = 100;
+#        CPU_MIN_PERF_ON_BAT = 0;
+#        CPU_MAX_PERF_ON_BAT = 20;
+#
+#        START_CHARGE_THRESH_BAT0 = 20;
+#        STOP_CHARGE_THRESH_BAT0 = 80;
+#
+#      };
+#  };
+
+  # Auto-cpufreq
+#  services.auto-cpufreq.enable = true;
+#  services.auto-cpufreq.settings = {
+#    battery = {
+#       governor = "powersave";
+#       turbo = "never";
+#    };
+#    charger = {
+#       governor = "performance";
+#       turbo = "auto";
+#    };
+#  };
+
+  #Powertop
+  powerManagement.powertop.enable = true;
+
 }
