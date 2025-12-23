@@ -30,8 +30,5 @@
       layout = "br";
       variant = "abnt2";
     };
-    excludePackages = with pkgs; [
-      xterm
-    ];
   };
 }

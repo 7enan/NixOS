@@ -11,34 +11,13 @@
       ./boot/default.nix
       ./networking/default.nix
       ./localization/default.nix
+      ./DE/default.nix
     ];
 
   services.udisks2.enable = true;
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  environment.gnome.excludePackages = with pkgs; [ 
-    
-    gnome-tour 
-    gnome-user-docs
-    gnome-software
-    epiphany
-    geary
-    gnome-system-monitor
-    gnome-music
-    gnome-characters
-    gnome-contacts
-    gnome-font-viewer
-    gnome-weather
-    gnome-maps
-    yelp
-    gnome-connections
-
-  ];
 
   services.blueman.enable = true;
 
