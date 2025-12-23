@@ -6,6 +6,9 @@
   home.username = "renan";
   home.homeDirectory = "/home/renan";
   
+  nixpkgs.config = {
+    allowUnfree = true;
+  }
   home.packages = with pkgs; [
     
     vscodium
