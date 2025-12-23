@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-
+  
   # Bootloader.
   boot.loader = {
     efi = {
@@ -56,16 +56,29 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
-  
-  # Flatpak
-  services.flatpak.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+
+  environment.gnome.excludePackages = with pkgs; [ 
+    
+    gnome-tour 
+    gnome-user-docs
+    gnome-software
+    epiphany
+    geary
+    gnome-system-monitor
+    gnome-music
+    gnome-characters
+    gnome-contacts
+    gnome-font-viewer
+    gnome-weather
+    gnome-maps
+    yelp
+    gnome-connections
+
+  ];
 
   services.blueman.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -94,6 +107,8 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+  
+  programs.dconf.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -104,9 +119,7 @@
     description = "Renan";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kiwix
-      gnome-network-displays
-
+      home-manager
     ];
   };
 
@@ -131,39 +144,20 @@
     #Apps
     wget
     git
-    neovim
     p7zip
     unrar
     sqlite
     fastfetch
     udisks
-    sqlitebrowser
-    kdePackages.kcalc # Calculator
-    kdePackages.kcharselect # Tool to select and copy special characters from all installed fonts
-    kdePackages.kclock # Clock app
-    kdePackages.kcolorchooser # A small utility to select a color
-    kdePackages.kolourpaint # Easy-to-use paint program
-    kdePackages.ksystemlog # KDE SystemLog Application
-    kdePackages.sddm-kcm # Configuration module for SDDM
-    kdiff3
-    kdePackages.partitionmanager
-    vlc
-    hplip
-    qbittorrent
     ollama-vulkan
     alpaca
     python3
     python3Packages.pip
-
-  ];
-
-  #pkgs.alpaca.override = {
-  #  ollama = pkgs.ollama-vulkan;
-  #};
-
-  environment.plasma6.excludePackages = with pkgs.kdePackages; [
-  plasma-browser-integration
-  elisa
+    gnome-tweaks
+    bibata-cursors
+    mission-center
+    lollypop
+    
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
