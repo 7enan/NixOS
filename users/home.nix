@@ -16,7 +16,6 @@
     kiwix
     gnome-network-displays
     obsidian
-    iotas
     
     # Gnome Extensions
     
