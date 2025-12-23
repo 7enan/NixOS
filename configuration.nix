@@ -51,7 +51,6 @@
     description = "Renan";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      home-manager
     ];
   };
 
@@ -67,13 +66,7 @@
   security.polkit.enable = true;
 
   environment.systemPackages = with pkgs; [
-    # System
-    gnome-keyring
-    playerctl
-    brightnessctl
-    exfatprogs
-
-    #Apps
+    home-manager
     wget
     git
     p7zip
