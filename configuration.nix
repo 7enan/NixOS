@@ -82,6 +82,9 @@
     bibata-cursors
     mission-center
     lollypop
+    libreoffice-fresh
+    hunspell
+    hunspellDicts.pt_BR
     
   ];
 
