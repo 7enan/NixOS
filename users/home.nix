@@ -30,11 +30,13 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.appindicator
     gnomeExtensions.media-controls
-    gnomeExtensions.dash-to-dock
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.tiling-shell
     gnomeExtensions.caffeine
     gnomeExtensions.lilypad
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.top-bar-organizer
+    clipboard-indicator
 
   ];
 
@@ -46,11 +48,13 @@
         "Bluetooth-Battery-Meter@maniacx.github.com"
         "appindicatorsupport@rgcjonas.gmail.com"
         "blur-my-shell@aunetx"
-        "dash-to-dock@micxgx.gmail.com"
         "mediacontrols@cliffniff.github.com"
         "tilingshell@ferrarodomenico.com"
         "caffeine@patapon.info"
         "lilypad@shendrew.github.io"
+        "clipboard-indicator@tudmotu.com"
+        "top-bar-organizer@julian.gse.jsts.xyz"
+        "dash-to-panel@jderose9.github.com"
         
       ];
     };
