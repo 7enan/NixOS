@@ -21,6 +21,9 @@
     alpaca
     ollama-vulkan
     sqlite
+    gimp
+    krita
+    inkscape
 
     # Gnome Extensions
     
