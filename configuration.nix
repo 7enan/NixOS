@@ -9,6 +9,7 @@
       ./localization/default.nix
       ./DE/default.nix
       ./packages/default.nix
+      ./users/default.nix
     ];
 
   services.udisks2.enable = true;
