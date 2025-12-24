@@ -31,7 +31,8 @@
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.tiling-shell
     gnomeExtensions.caffeine
-    
+    gnomeExtensions.lilypad
+
   ];
 
   dconf = {
@@ -46,6 +47,7 @@
         "mediacontrols@cliffniff.github.com"
         "tilingshell@ferrarodomenico.com"
         "caffeine@patapon.info"
+        "lilypad@shendrew.github.io"
         
       ];
     };
