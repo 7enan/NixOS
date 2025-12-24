@@ -30,5 +30,6 @@
       layout = "br";
       variant = "abnt2";
     };
+    libinput.enable = true;
   };
 }
