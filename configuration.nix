@@ -12,6 +12,7 @@
       ./networking/default.nix
       ./localization/default.nix
       ./DE/default.nix
+      ./packages/default.nix
     ];
 
   services.udisks2.enable = true;
@@ -54,40 +55,6 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
- 
-  security.polkit.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    home-manager
-    wget
-    git
-    p7zip
-    unrar
-    sqlite
-    fastfetch
-    udisks
-    ollama-vulkan
-    alpaca
-    python3
-    python3Packages.pip
-    gnome-tweaks
-    bibata-cursors
-    mission-center
-    lollypop
-    libreoffice-fresh
-    hunspell
-    hunspellDicts.pt_BR
-    
-  ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -115,51 +82,9 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  xdg.portal.config.common.default = "gtk";
-  
-  ##/######\##
-  #/#NixOS##\#
-  #\#Laptop#/#
-  ##\######/##
   
   # Thermald
   services.thermald.enable = true;
-
-  # TLP
-#  services.tlp = {
-#      enable = true;
-#      settings = {
-#        CPU_SCALING_GOVERNOR_ON_AC = "performance";
-#        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-#
-#        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-#        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-#
-#        CPU_MIN_PERF_ON_AC = 0;
-#        CPU_MAX_PERF_ON_AC = 100;
-#        CPU_MIN_PERF_ON_BAT = 0;
-#        CPU_MAX_PERF_ON_BAT = 20;
-#
-#        START_CHARGE_THRESH_BAT0 = 20;
-#        STOP_CHARGE_THRESH_BAT0 = 80;
-#
-#      };
-#  };
-
-  # Auto-cpufreq
-#  services.auto-cpufreq.enable = true;
-#  services.auto-cpufreq.settings = {
-#    battery = {
-#       governor = "powersave";
-#       turbo = "never";
-#    };
-#    charger = {
-#       governor = "performance";
-#       turbo = "auto";
-#    };
-#  };
 
   #Powertop
   powerManagement.powertop.enable = true;

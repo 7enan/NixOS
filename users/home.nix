@@ -16,7 +16,12 @@
     kiwix
     gnome-network-displays
     obsidian
-    
+    python3
+    python3Packages.pip
+    alpaca
+    ollama-vulkan
+    sqlite
+
     # Gnome Extensions
     
     gnomeExtensions.blur-my-shell
