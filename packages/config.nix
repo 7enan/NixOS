@@ -2,7 +2,7 @@
 
 {
   nix.settings.auto-optimise-store = true;
-  
+
   nixpkgs.config = {
     allowBroken = false;
     allowUnfree = true;
@@ -17,6 +17,6 @@
   nix.gc = {
     automatic = true;
     dates = "weakly";
-    options "--delete-older-than 5d"
+    options = "--delete-older-than 5d";
   };
 }
