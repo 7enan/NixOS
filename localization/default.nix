@@ -25,11 +25,13 @@
   console.keyMap = "br-abnt2";
 
   # X11 keyboard
-  services.xserver = {
-    xkb = {
-      layout = "br";
-      variant = "abnt2";
-    };
+  services = { 
+    xserver = {
+      xkb = {
+        layout = "br";
+        variant = "abnt2";
+      };
     libinput.enable = true;
+    };
   };
 }
