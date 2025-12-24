@@ -36,7 +36,7 @@
     gnomeExtensions.lilypad
     gnomeExtensions.dash-to-panel
     gnomeExtensions.top-bar-organizer
-    clipboard-indicator
+    gnomeExtensions.clipboard-indicator
 
   ];
 
