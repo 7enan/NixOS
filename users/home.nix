@@ -35,7 +35,6 @@
     gnomeExtensions.caffeine
     gnomeExtensions.lilypad
     gnomeExtensions.dash-to-panel
-    gnomeExtensions.top-bar-organizer
     gnomeExtensions.clipboard-indicator
 
   ];
@@ -53,7 +52,6 @@
         "caffeine@patapon.info"
         "lilypad@shendrew.github.io"
         "clipboard-indicator@tudmotu.com"
-        "top-bar-organizer@julian.gse.jsts.xyz"
         "dash-to-panel@jderose9.github.com"
         
       ];
