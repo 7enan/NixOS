@@ -53,7 +53,9 @@
         "caffeine@patapon.info"
         "lilypad@shendrew.github.io"
         "clipboard-indicator@tudmotu.com"
-        
+        "dash-in-panel@fthx"
+        "top-bar-organizer@julian.gse.jsts.xyz"
+
       ];
     };
   };
