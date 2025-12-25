@@ -10,6 +10,7 @@
     fastfetch
     udisks
     bibata-cursors
+    sbctl
 
     wget
     git
