@@ -34,8 +34,9 @@
     gnomeExtensions.tiling-shell
     gnomeExtensions.caffeine
     gnomeExtensions.lilypad
-    gnomeExtensions.dash-to-panel
     gnomeExtensions.clipboard-indicator
+    gnomeExtensions.top-bar-organizer
+    gnomeExtensions.dash-in-panel
 
   ];
 
@@ -52,7 +53,6 @@
         "caffeine@patapon.info"
         "lilypad@shendrew.github.io"
         "clipboard-indicator@tudmotu.com"
-        "dash-to-panel@jderose9.github.com"
         
       ];
     };
