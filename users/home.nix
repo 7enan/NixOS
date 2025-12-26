@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, configs, ... }:
 
 {
   
@@ -9,7 +9,7 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
-  
+
   home.packages = with pkgs; [
     
     vscodium

@@ -4,6 +4,7 @@
   imports =
     [
       ./config.nix
-      ./packages.nix       
+      ./packages.nix
+      ./waydroid.nix   
     ];
 }
