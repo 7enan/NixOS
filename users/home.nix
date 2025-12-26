@@ -10,10 +10,14 @@
     allowUnfree = true;
   };
   
-  # Games
-  programs.gamescope.enable = true;
-  programs.gamemode.enable = true;
-  programs.steam.enable = true;
+  programs = {
+    
+    # Games
+    gamescope.enable = true;
+    gamemode.enable = true;
+    steam.enable = true;
+    
+  };
 
   home.packages = with pkgs; [
     
