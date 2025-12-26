@@ -4,7 +4,7 @@
   imports =
     [
       ./config.nix
-      ./packages.nix
-      ./waydroid.nix   
+      ./packages.nix 
+      ./games.nix  
     ];
 }
