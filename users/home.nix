@@ -28,6 +28,7 @@
     # Games
     heroic
     protonplus
+    ludusavi
 
     # Gnome Extensions
     

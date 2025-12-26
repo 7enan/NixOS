@@ -12,6 +12,7 @@
     bibata-cursors
     sbctl
     libnotify
+    rclone
 
     wget
     git
