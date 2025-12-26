@@ -39,4 +39,12 @@
 
   powerManagement.powertop.enable = true;
 
+
+  hardware.graphics.enable = true;
+  hardware.graphics.extraPackages = with pkgs; [
+    mesa
+    intel-media-driver  # Para suporte a Quick Sync
+    vulkan-tools         # Para ferramentas Vulkan
+  ];
+
 }
