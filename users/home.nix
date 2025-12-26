@@ -9,6 +9,11 @@
   nixpkgs.config = {
     allowUnfree = true;
   };
+  
+  # Games
+  programs.gamescope.enable = true;
+  programs.gamemode.enable = true;
+  programs.steam.enable = true;
 
   home.packages = with pkgs; [
     
@@ -24,6 +29,10 @@
     gimp
     krita
     inkscape
+    
+    # Games
+    heroic
+    protonplus
 
     # Gnome Extensions
     
