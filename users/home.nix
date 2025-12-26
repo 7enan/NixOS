@@ -1,4 +1,4 @@
-{ pkgs, configs, ... }:
+{ pkgs, configs, programs, ... }:
 
 {
   
@@ -8,15 +8,6 @@
   
   nixpkgs.config = {
     allowUnfree = true;
-  };
-  
-  programs = {
-    
-    # Games
-    gamescope.enable = true;
-    gamemode.enable = true;
-    steam.enable = true;
-    
   };
 
   home.packages = with pkgs; [
@@ -35,8 +26,11 @@
     inkscape
     
     # Games
+    steam
     heroic
     protonplus
+    gamescope
+    gamemode
 
     # Gnome Extensions
     
