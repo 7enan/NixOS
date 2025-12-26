@@ -26,11 +26,8 @@
     inkscape
     
     # Games
-    steam
     heroic
     protonplus
-    gamescope
-    gamemode
 
     # Gnome Extensions
     

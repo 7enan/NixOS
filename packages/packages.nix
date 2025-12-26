@@ -11,6 +11,7 @@
     udisks
     bibata-cursors
     sbctl
+    libnotify
 
     wget
     git

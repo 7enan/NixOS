@@ -37,6 +37,5 @@
     enable = true;
     powerOnBoot = false;
   };
-  hardware.opengl.enable = true;
 
 }
