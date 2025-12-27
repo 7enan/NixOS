@@ -40,7 +40,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.top-bar-organizer
-    gnomeExtensions.dash-in-panel
+    gnomeExtensions.battery-health-charging
 
   ];
 
@@ -56,8 +56,8 @@
         "tilingshell@ferrarodomenico.com"
         "caffeine@patapon.info"
         "clipboard-indicator@tudmotu.com"
-        "dash-in-panel@fthx"
         "top-bar-organizer@julian.gse.jsts.xyz"
+        "Battery-Health-Charging@maniacx.github.com"
 
       ];
     };
