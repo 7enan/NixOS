@@ -81,15 +81,4 @@
     };
   };
 
-  services.flatpak.enable = true;
-
-  # Definindo remotes
-  services.flatpak.remotes = {
-    "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-  };
-
-  # Aplicativos Flatpak a instalar
-  services.flatpak.packages = [
-    { appId = "org.gnome.NetworkDisplays"; origin = "flathub"; }
-  ];
 }
