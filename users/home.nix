@@ -49,19 +49,6 @@
 
   ];
 
-  services.flatpak = {
-    enable = true;
-    extraRemotes = [
-      {
-        name = "flathub";
-        url = "https://flathub.org/repo/flathub.flatpakrepo";
-      }
-    ];
-    packages = [
-      "org.gnome.NetworkDisplays"
-    ];
-  };
-
   dconf = {
     enable = true;
     settings."org/gnome/shell" = {
