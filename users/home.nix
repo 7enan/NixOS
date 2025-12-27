@@ -28,7 +28,6 @@
     gimp
     krita
     inkscape
-    flatpak
     
     # Games
     heroic
