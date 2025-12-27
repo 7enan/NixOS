@@ -4,18 +4,14 @@
     declarative-flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
   };
 
-  outputs = { self, nixpkgs, home-manager, declarative-flatpak, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
   {
-    # Configurações do sistema e Home Manager
     homeConfigurations = {
-      yourUsername = home-manager.lib.homeManagerConfiguration {
+      renan = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${builtins.currentSystem}; # Referência ao conjunto de pacotes apropriado
         modules = [
-          # Importando o módulo do declarative-flatpak
-          declarative-flatpak.homeModules.default
-        ];
-
-        # Configurações adicionais do Home Manager
-        home.packages = [
+          # Importação do seu arquivo home.nix
+          import ./users/home.nix
         ];
       };
     };
