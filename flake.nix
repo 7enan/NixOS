@@ -1,6 +1,6 @@
 {
   inputs = {
-    # Outros inputs
+    nixpkgs.url = "nixpkgs/github:nixos/nixpkgs";
     declarative-flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
   };
 
