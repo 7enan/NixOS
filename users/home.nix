@@ -45,6 +45,7 @@
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.top-bar-organizer
     gnomeExtensions.battery-health-charging
+    gnomeExtensions.removable-drive-menu
 
   ];
 
@@ -62,6 +63,7 @@
         "clipboard-indicator@tudmotu.com"
         "top-bar-organizer@julian.gse.jsts.xyz"
         "Battery-Health-Charging@maniacx.github.com"
+        "drive-menu@gnome-shell-extensions.gcampax.github.com"
 
       ];
     };
