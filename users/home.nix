@@ -1,4 +1,4 @@
-{ pkgs, configs, programs, ... }:
+{ pkgs, configs, programs, desktop, ... }:
 
 {
   
@@ -10,11 +10,15 @@
     allowUnfree = true;
   };
 
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
   home.packages = with pkgs; [
     
     vscodium
     kiwix
-    gnome-network-displays
     obsidian
     python3
     python3Packages.pip
@@ -24,6 +28,7 @@
     gimp
     krita
     inkscape
+    flatpak
     
     # Games
     heroic
@@ -44,6 +49,19 @@
 
   ];
 
+  services.flatpak = {
+    enable = true;
+    extraRemotes = [
+      {
+        name = "flathub";
+        url = "https://flathub.org/repo/flathub.flatpakrepo";
+      }
+    ];
+    packages = [
+      "org.gnome.NetworkDisplays"
+    ];
+  };
+
   dconf = {
     enable = true;
     settings."org/gnome/shell" = {
@@ -62,4 +80,16 @@
       ];
     };
   };
+
+   services.flatpak.enable = true;
+
+  # Definindo remotes
+  services.flatpak.remotes = {
+    "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+  };
+
+  # Aplicativos Flatpak a instalar
+  services.flatpak.packages = [
+    { appId = "org.gnome.NetworkDisplays"; origin = "flathub"; }
+  ];
 }
