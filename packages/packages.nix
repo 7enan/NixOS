@@ -4,6 +4,11 @@
   
   programs.firefox.enable = true;
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   environment.systemPackages = with pkgs; [
     
     home-manager
@@ -13,10 +18,13 @@
     sbctl
     libnotify
     rclone
-    winboat
+    nodejs_24
     freerdp
     distrobox
-    docker-compose
+    docker-compose  
+    appimage-run
+    gearlever
+    podman-compose
 
     wget
     git
