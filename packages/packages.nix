@@ -25,6 +25,7 @@
     appimage-run
     gearlever
     podman-compose
+    docker
 
     wget
     git
