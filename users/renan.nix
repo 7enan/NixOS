@@ -10,4 +10,6 @@
         "docker"
     ];
   };
+
+  users.extraGroups.docker.members = [ "renan" ];
 }
