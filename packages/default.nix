@@ -5,6 +5,8 @@
     [
       ./config.nix
       ./packages.nix 
-      ./games.nix  
+      ./games.nix
+      ./docker.nix
+      ./distrobox.nix
     ];
 }

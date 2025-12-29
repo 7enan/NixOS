@@ -13,6 +13,10 @@
     sbctl
     libnotify
     rclone
+    winboat
+    freerdp
+    distrobox
+    docker-compose
 
     wget
     git
