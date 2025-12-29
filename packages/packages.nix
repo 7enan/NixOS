@@ -26,6 +26,7 @@
     gearlever
     podman-compose
     docker
+    localsend
 
     wget
     git
