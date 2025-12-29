@@ -16,23 +16,6 @@
   };
 
   home.packages = with pkgs; [
-    
-    vscodium
-    kiwix
-    obsidian
-    python3
-    python3Packages.pip
-    alpaca
-    ollama-vulkan
-    sqlite
-    gimp
-    krita
-    inkscape
-    
-    # Games
-    heroic
-    protonplus
-    ludusavi
 
     # Gnome Extensions
     

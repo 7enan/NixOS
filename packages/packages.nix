@@ -26,6 +26,23 @@
     gearlever
     podman-compose
     docker
+        
+    vscodium
+    kiwix
+    obsidian
+    python3
+    python3Packages.pip
+    alpaca
+    ollama-vulkan
+    sqlite
+    gimp
+    krita
+    inkscape
+    
+    # Games
+    heroic
+    protonplus
+    ludusavi
 
     wget
     git
